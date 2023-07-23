@@ -5,13 +5,11 @@ import express from "express";
 
 import { businessRouter } from "./businesses/infrastructure/rest-api/business-router";
 import { config } from "./shared/infrastructure/config";
-import { userRouter } from "./users/infrastructure/rest-api/user-router";
 
 function boostrap() {
   const app = express();
 
   app.use(bodyParser.json());
-  app.use("/users", userRouter);
   app.use("/businesses", businessRouter);
 
   const { port } = config.server;
