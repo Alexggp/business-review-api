@@ -10,7 +10,7 @@ export const BUSINESSES: (BusinessPhysical | BusinessOnline)[] = [
   },
   {
     id: "2",
-    name: "Mercería Nati",
+    name: "Aspiradoras Nati",
     website: "www.natipelusas.com",
     email: "nati@mail.com",
     numberOfReviews: 13,
@@ -25,15 +25,15 @@ export const BUSINESSES: (BusinessPhysical | BusinessOnline)[] = [
   {
     id: "4",
     name: "Churros tres hermanos",
-    address: "www.treshermanoschurreria.com",
+    address: "Plaza de la Paja, 2",
     phone: 90812321,
     email: "churros3hermanos@mail.com",
     numberOfReviews: 3,
   },
   {
     id: "5",
-    name: "Churros tres hermanos",
-    address: "www.treshermanoschurreria.com",
+    name: "Andamios Paco",
+    address: "Calle Jesús, 23 Madrid",
     phone: 912312389,
     email: "churros3hermanos@mail.com",
     numberOfReviews: 3,
