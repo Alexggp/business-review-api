@@ -1,13 +1,13 @@
 {
-  "name": "hexagonal-architecture-typescript-service-skeleton",
+  "name": "business-review-api",
   "version": "1.0.0",
-  "description": "Skeleton for new typescript services based on hexagonal architecture",
+  "description": "Example of API REST made with TypeScript and hexagonal architecture",
   "main": "src/index.js",
   "scripts": {
     "start": "node dist/src/main.js",
     "start:dev": "tsnd --respawn src/main.ts",
     "test": "npm run test:unit",
-    "test:unit": "NODE_ENV=test jest --coverage",
+    "test:unit": "jest --coverage",
     "prepare": "husky install",
     "lint": "eslint --ignore-path .gitignore . --ext .js,.ts",
     "lint:fix": "npm run lint -- --fix",
@@ -17,12 +17,13 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/AlbertHernandez/hexagonal-architecture-typescript-service-skeleton.git"
+    "url": "git+https://github.com/Alexggp/business-review-api"
   },
   "keywords": [
     "typescript",
     "hexagonal architecture",
-    "skeleton"
+    "API",
+    "REST"
   ],
   "author": "alberthernandezdev@gmail.com",
   "license": "MIT",
@@ -31,9 +32,9 @@
     "npm": ">=9.3.0"
   },
   "bugs": {
-    "url": "https://github.com/AlbertHernandez/hexagonal-architecture-typescript-service-skeleton/issues"
+    "url": "https://github.com/Alexggp/business-review-api/issues"
   },
-  "homepage": "https://github.com/AlbertHernandez/hexagonal-architecture-typescript-service-skeleton#readme",
+  "homepage": "https://github.com/Alexggp/business-review-api#readme",
   "devDependencies": {
     "@commitlint/cli": "^17.4.2",
     "@commitlint/config-conventional": "^17.4.2",
