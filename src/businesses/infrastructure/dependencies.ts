@@ -4,6 +4,6 @@ import { InMemoryBusinessRepository } from "./business-repository/in-memory-busi
 import { BusinessController } from "./rest-api/business-controller";
 
 const businessRepository = new InMemoryBusinessRepository();
-const welcomeEmailSender = new BusinessInformation(businessRepository, logger);
+const businessInformation = new BusinessInformation(businessRepository, logger);
 
-export const businessController = new BusinessController(welcomeEmailSender);
+export const businessController = new BusinessController(businessInformation);

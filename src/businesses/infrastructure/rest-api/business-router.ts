@@ -4,9 +4,9 @@ import { businessController } from "../dependencies";
 
 const businessRouter = express.Router();
 
-businessRouter.post(
+businessRouter.get(
   "/:id",
-  businessController.sendBussinesInformation.bind(businessController)
+  businessController.getBussinesInformation.bind(businessController)
 );
 
 export { businessRouter };

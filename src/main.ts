@@ -4,6 +4,7 @@ import bodyParser from "body-parser";
 import express from "express";
 
 import { businessRouter } from "./businesses/infrastructure/rest-api/business-router";
+import { reviewRouter } from "./reviews/infrastructure/rest-api/review-router";
 import { config } from "./shared/infrastructure/config";
 
 function boostrap() {
@@ -11,6 +12,7 @@ function boostrap() {
 
   app.use(bodyParser.json());
   app.use("/businesses", businessRouter);
+  app.use("/reviews", reviewRouter);
 
   const { port } = config.server;
 
