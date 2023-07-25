@@ -1,6 +1,6 @@
 import { Review } from "../domain/review";
-import { reviewDto } from "../domain/review-dto";
 import { ReviewRepository } from "../domain/review-repository";
+import { reviewDto } from "../infrastructure/validation/review-dto";
 
 export class CreateNewReview {
   constructor(private readonly reviewRepository: ReviewRepository) {}

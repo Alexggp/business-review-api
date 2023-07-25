@@ -1,8 +1,8 @@
 import { v4 as uuidv4 } from "uuid";
 
 import { Review } from "../../domain/review";
-import { reviewDto } from "../../domain/review-dto";
 import { ReviewRepository } from "../../domain/review-repository";
+import { reviewDto } from "../validation/review-dto";
 import { REVIEWS } from "./reviews";
 
 export class InMemoryReviewRepository implements ReviewRepository {

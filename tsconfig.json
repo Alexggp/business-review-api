@@ -13,7 +13,8 @@
     "noUnusedLocals": true,
     "outDir": "./dist",
     "experimentalDecorators": true,
-    "strictPropertyInitialization": false
+    "strictPropertyInitialization": false,
+    
   },
   "include": [
     "src/**/**.ts",

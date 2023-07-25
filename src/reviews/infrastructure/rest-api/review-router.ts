@@ -1,8 +1,8 @@
 import express from "express";
 
 import { validationMiddleware } from "../../../shared/infrastructure/validation/validation-middleware";
-import { reviewDto } from "../../domain/review-dto";
 import { reviewController } from "../dependencies";
+import { reviewDto } from "../validation/review-dto";
 
 const reviewRouter = express.Router();
 
