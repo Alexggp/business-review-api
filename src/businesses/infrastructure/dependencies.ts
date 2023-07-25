@@ -1,9 +1,9 @@
 import { logger } from "../../shared/infrastructure/dependencies";
 import { BusinessInformation } from "../application/buesiness-information";
-import { InMemoryBusinessRepository } from "./business-repository/in-memory-business-repository";
+import { MongoBusinessRepository } from "./business-repository/mongo-business-repository";
 import { BusinessController } from "./rest-api/business-controller";
 
-const businessRepository = new InMemoryBusinessRepository();
+const businessRepository = new MongoBusinessRepository();
 const businessInformation = new BusinessInformation(businessRepository, logger);
 
 export const businessController = new BusinessController(businessInformation);
