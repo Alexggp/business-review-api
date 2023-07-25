@@ -1,5 +1,6 @@
 import { NextFunction, Request, Response } from "express";
 
+import { logger } from "../dependencies";
 import { validationPipe } from "./validation-pipe";
 
 type errorMessage = {
@@ -14,7 +15,8 @@ export const validationMiddleware =
         ...req.body,
         ...req.params,
       });
-      if (result.errors?.length) {
+      if (result.errors.length) {
+        logger.error("Validation Error");
         console.log(result);
         return res.status(400).json({
           success: false,
