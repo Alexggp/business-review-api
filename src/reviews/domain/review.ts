@@ -7,3 +7,10 @@ export class Review {
     readonly rating: number
   ) {}
 }
+
+export type NewReview = {
+  business_id: string;
+  user_name: string;
+  text: string;
+  rating: number;
+};
