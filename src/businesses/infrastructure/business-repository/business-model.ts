@@ -5,7 +5,6 @@ interface BusinessSchema extends Document {
   type: string;
   name: string;
   email: string;
-  numberOfReviews: number;
   website: string;
   address: string;
   phone: number;
@@ -30,10 +29,6 @@ const businessSchema = new Schema({
   },
   email: {
     type: String,
-    required: true,
-  },
-  numberOfReviews: {
-    type: Number,
     required: true,
   },
   website: {

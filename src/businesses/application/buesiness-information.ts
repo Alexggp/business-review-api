@@ -23,6 +23,7 @@ export class BusinessInformation {
       );
       // Fetching the reviews of this bisness and calculating the average rating
       const reviews = await this.reviewRepository.getByBussinesId(businessId);
+      business.numberOfReviews = reviews.length;
       if (reviews.length) {
         const mean = (
           reviews.reduce((total, review) => total + review.rating, 0) /

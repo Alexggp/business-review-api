@@ -2,7 +2,7 @@ export interface Business {
   readonly id: string;
   readonly name: string;
   readonly email: string;
-  readonly numberOfReviews: number;
+  numberOfReviews?: number;
   averageRating?: string;
 }
 export class BusinessOnline implements Business {
@@ -10,8 +10,7 @@ export class BusinessOnline implements Business {
     readonly id: string,
     readonly name: string,
     readonly website: string,
-    readonly email: string,
-    readonly numberOfReviews: number
+    readonly email: string
   ) {}
 }
 export class BusinessPhysical implements Business {
@@ -20,7 +19,6 @@ export class BusinessPhysical implements Business {
     readonly name: string,
     readonly address: string,
     readonly phone: number,
-    readonly email: string,
-    readonly numberOfReviews: number
+    readonly email: string
   ) {}
 }

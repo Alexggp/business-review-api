@@ -22,8 +22,7 @@ export class MongoBusinessRepository implements BusinessRepository {
         result._id.toString(),
         result.name,
         result.website!,
-        result.email,
-        result.numberOfReviews
+        result.email
       );
     } else {
       business = new BusinessPhysical(
@@ -31,8 +30,7 @@ export class MongoBusinessRepository implements BusinessRepository {
         result.name,
         result.address!,
         result.phone!,
-        result.email,
-        result.numberOfReviews
+        result.email
       );
     }
 
