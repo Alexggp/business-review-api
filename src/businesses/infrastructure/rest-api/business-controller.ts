@@ -1,6 +1,6 @@
 import { Request, Response } from "express";
 
-import { BusinessInformation } from "../../application/buesiness-information";
+import { BusinessInformation } from "../../application/business-information";
 
 export class BusinessController {
   constructor(private readonly businessInformation: BusinessInformation) {}

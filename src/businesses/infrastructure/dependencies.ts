@@ -1,6 +1,6 @@
 import { MongoReviewResository } from "../../reviews/infrastructure/review-repository/mongo-review-repository";
 import { logger } from "../../shared/infrastructure/dependencies";
-import { BusinessInformation } from "../application/buesiness-information";
+import { BusinessInformation } from "../application/business-information";
 import { MongoBusinessRepository } from "./business-repository/mongo-business-repository";
 import { BusinessController } from "./rest-api/business-controller";
 
