@@ -3,6 +3,7 @@ export interface Business {
   readonly name: string;
   readonly email: string;
   readonly numberOfReviews: number;
+  averageRating?: string;
 }
 export class BusinessOnline implements Business {
   constructor(
