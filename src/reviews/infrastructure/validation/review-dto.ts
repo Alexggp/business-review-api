@@ -1,7 +1,8 @@
-import { IsInt, IsString, Length, Max, Min } from "class-validator";
+import { IsInt, IsString, Length, Matches, Max, Min } from "class-validator";
 
 export class reviewDto {
   @IsString()
+  @Matches(/^[0-9a-fA-F]{24}$/)
   business_id: string;
   @IsString()
   user_name: string;
