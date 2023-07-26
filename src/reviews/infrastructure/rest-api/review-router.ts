@@ -2,7 +2,7 @@ import express from "express";
 
 import { validationMiddleware } from "../../../shared/infrastructure/validation/validation-middleware";
 import { reviewController } from "../dependencies";
-import { getReviewDto } from "../validation/get-review-dto";
+import { getReviewBusinessDto } from "../validation/get-review-business-dto";
 import { postReviewDto } from "../validation/post-review-dto";
 
 const reviewRouter = express.Router();
@@ -15,7 +15,7 @@ reviewRouter.post(
 
 reviewRouter.get(
   "/business/:businessId",
-  validationMiddleware(getReviewDto),
+  validationMiddleware(getReviewBusinessDto),
   reviewController.getReviewsOfABusiness.bind(reviewController)
 );
 
