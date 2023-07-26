@@ -7,9 +7,12 @@ export class BusinessController {
 
   async getBussinesInformation(req: Request, res: Response) {
     const { id: businessId } = req.params;
-    const bussiness = await this.businessInformation.getBussinesById(
-      businessId
-    );
-    res.status(200).send(bussiness);
+    const business = await this.businessInformation.getBussinesById(businessId);
+
+    if (!business) {
+      return res.status(404).send();
+    }
+
+    res.status(200).send(business);
   }
 }

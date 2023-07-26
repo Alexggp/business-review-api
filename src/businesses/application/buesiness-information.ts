@@ -8,22 +8,19 @@ export class BusinessInformation {
     private readonly logger: Logger
   ) {}
 
-  async getBussinesById(businessId: string): Promise<Business> {
-    this.logger.info(
-      `[BusinessInformation] - Fetching information of bussines: ${businessId}`
-    );
-
+  async getBussinesById(businessId: string): Promise<Business | null> {
     const business = await this.businessRepository.getById(businessId);
 
     if (!business) {
+      // trying the built-in logger a little bit
       const error = new Error(`business not found: ${businessId}`);
-      this.logger.error(error.message);
-      throw error;
+      this.logger.error(`[ERROR] ${error.message}`);
+    } else {
+      this.logger.info(
+        "[BusinessInformation] - Business information successfuly fetched"
+      );
     }
 
-    this.logger.info(
-      "[BusinessInformation] - Business information successfuly fetched"
-    );
     return business;
   }
 }

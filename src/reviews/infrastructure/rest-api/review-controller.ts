@@ -12,6 +12,11 @@ export class ReviewController {
   async getReviewsOfABusiness(req: Request, res: Response) {
     const { businessId: businessId } = req.params;
     const reviews = await this.reviewsOfABusiness.getByBussinesId(businessId);
+
+    if (!reviews.length) {
+      return res.status(404).send();
+    }
+
     res.status(200).send(reviews);
   }
   async postNewReview(req: Request, res: Response) {
