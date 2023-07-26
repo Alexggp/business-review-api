@@ -2,11 +2,11 @@ import { v4 as uuidv4 } from "uuid";
 
 import { Review } from "../../domain/review";
 import { ReviewRepository } from "../../domain/review-repository";
-import { reviewDto } from "../validation/review-dto";
+import { postReviewDto } from "../validation/post-review-dto";
 import { REVIEWS } from "./reviews";
 
 export class InMemoryReviewRepository implements ReviewRepository {
-  async createNewReview(newReviewData: reviewDto): Promise<Review> {
+  async createNewReview(newReviewData: postReviewDto): Promise<Review> {
     const newReview = new Review(
       uuidv4(),
       newReviewData.business_id,

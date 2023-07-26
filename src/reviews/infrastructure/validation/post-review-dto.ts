@@ -1,6 +1,6 @@
 import { IsInt, IsString, Length, Matches, Max, Min } from "class-validator";
 
-export class reviewDto {
+export class postReviewDto {
   @IsString()
   @Matches(/^[0-9a-fA-F]{24}$/)
   business_id: string;
