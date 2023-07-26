@@ -6,21 +6,18 @@ export const BUSINESSES: (BusinessPhysical | BusinessOnline)[] = [
     name: "Andamios Paco",
     website: "www.andamiospaco.com",
     email: "andamiosPaco@mail.com",
-    numberOfReviews: 123,
   },
   {
     id: "2",
     name: "Mercería Nati",
     website: "www.natipelusas.com",
     email: "nati@mail.com",
-    numberOfReviews: 13,
   },
   {
     id: "3",
     name: "Churros tres hermanos",
     website: "www.treshermanoschurreria.com",
     email: "churros3hermanos@mail.com",
-    numberOfReviews: 3,
   },
   {
     id: "4",
@@ -28,7 +25,6 @@ export const BUSINESSES: (BusinessPhysical | BusinessOnline)[] = [
     address: "www.treshermanoschurreria.com",
     phone: 90812321,
     email: "churros3hermanos@mail.com",
-    numberOfReviews: 3,
   },
   {
     id: "5",
@@ -36,6 +32,5 @@ export const BUSINESSES: (BusinessPhysical | BusinessOnline)[] = [
     address: "www.treshermanoschurreria.com",
     phone: 912312389,
     email: "churros3hermanos@mail.com",
-    numberOfReviews: 3,
   },
 ];
