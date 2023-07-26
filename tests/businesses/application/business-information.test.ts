@@ -59,7 +59,6 @@ describe("BusinessInformation", () => {
     const business = await businessInfrmation.getBussinesById(
       "64c0474167a03562d0baa7db"
     );
-    console.log(business);
     expect(mockedBusinessRepository.getById).toBeCalled();
     expect(mockedReviewRepository.getByBussinesId).toBeCalled();
     expect(business).not.toBe(null);
@@ -75,7 +74,6 @@ describe("BusinessInformation", () => {
     const business = await businessInfrmation.getBussinesById(
       "64c0474167a03562d0baa7db"
     );
-    console.log(business);
     expect(mockedBusinessRepository.getById).toBeCalled();
     expect(business).toBe(null);
   });
