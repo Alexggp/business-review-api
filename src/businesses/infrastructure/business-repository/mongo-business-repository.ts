@@ -38,4 +38,10 @@ export class MongoBusinessRepository implements BusinessRepository {
 
     return business;
   }
+  async updateReview(id: string): Promise<boolean> {
+    const update = { $inc: { numberOfReviews: 1 } };
+    const result = await BussinessesModel.findByIdAndUpdate(id, update);
+
+    return !!result;
+  }
 }

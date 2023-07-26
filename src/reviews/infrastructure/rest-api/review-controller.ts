@@ -22,6 +22,9 @@ export class ReviewController {
   async postNewReview(req: Request, res: Response) {
     const data = req.body;
     const review = await this.createNewReview.createNewReview(data);
+    if (!review) {
+      return res.status(400).send();
+    }
     res.status(200).send(review);
   }
 }
