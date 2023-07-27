@@ -1,17 +1,18 @@
-<h1 align="center">Hexagonal Architecture Typescript Service Skeleton</h1>
+<h1 align="center">Business Review API</h1>
 
 <p align="center">
-  Skeleton for new typescript services based on hexagonal architecture
+  Example of API REST made with TypeScript and hexagonal architecture
 </p>
 
 <p align="center">
-    <a href="https://github.com/AlbertHernandez/hexagonal-architecture-typescript-service-skeleton/actions/workflows/nodejs.yml?branch=main"><img src="https://github.com/AlbertHernandez/hexagonal-architecture-typescript-service-skeleton/actions/workflows/nodejs.yml/badge.svg?branch=main" alt="nodejs"/></a>
+    <a href="https://github.com/Alexggp/business-review-api/actions/workflows/nodejs.yml?branch=main"><img src="https://github.com/Alexggp/business-review-api/actions/workflows/nodejs.yml/badge.svg?branch=main" alt="nodejs"/></a>
 </p>
 
 ## Table of Contents
 
 * [Installing](#installing)
 * [Building](#building)
+* [Starting](#starting)
 * [Testing](#testing)
 * [Linting](#linting)
 
@@ -29,6 +30,13 @@ npm install
 ```bash
 npm run build
 ```
+
+## Starting
+
+```bash
+npm run start:dev
+```
+
 
 ## Testing
 
@@ -51,3 +59,8 @@ Fix lint issues automatically
 ```bash
 npm run lint:fix
 ```
+
+
+<p align="left">
+  Based on <a href="https://github.com/AlbertHernandez/hexagonal-architecture-typescript-service-skeleton">Hexagonal Architecture Typescript Service Skeleton</a>
+</p>
