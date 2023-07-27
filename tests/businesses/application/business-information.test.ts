@@ -11,50 +11,49 @@ const mockedBusinessRepositoryResponse = {
   email: "churros3hermanos@mail.com",
 };
 
-const mockedBusinessRepository: jest.Mocked<BusinessRepository> = {
-  getById: jest.fn().mockImplementation(() => mockedBusinessRepositoryResponse),
-};
-
 const mockedReviewRepositoryResponse = [
   { rating: 2 },
   { rating: 4 },
   { rating: 5 },
 ];
 
-const mockedReviewRepository: jest.Mocked<ReviewRepository> = {
-  getByBussinesId: jest
-    .fn()
-    .mockImplementation(() => mockedReviewRepositoryResponse),
-  createNewReview: jest.fn(),
-};
-const mockedLogger: jest.Mocked<Logger> = {
-  error: jest.fn(),
-  info: jest.fn(),
-};
-
 describe("BusinessInformation", () => {
+  afterEach(() => {
+    jest.clearAllMocks();
+  });
+
+  const mockedBusinessRepository: jest.Mocked<BusinessRepository> = {
+    getById: jest.fn().mockImplementation(() => null),
+  };
+
+  const mockedReviewRepository: jest.Mocked<ReviewRepository> = {
+    getByBussinesId: jest.fn().mockImplementation(() => []),
+    createNewReview: jest.fn(),
+  };
+  const mockedLogger: jest.Mocked<Logger> = {
+    error: jest.fn(),
+    info: jest.fn(),
+  };
+
   const businessInfrmation = new BusinessInformation(
     mockedBusinessRepository,
     mockedReviewRepository,
     mockedLogger
   );
 
-  test("getting business by id", async () => {
+  test("business do not exists", async () => {
     const business = await businessInfrmation.getBussinesById(
       "64c0474167a03562d0baa7db"
     );
     expect(mockedBusinessRepository.getById).toBeCalled();
-    expect(mockedReviewRepository.getByBussinesId).toBeCalled();
-    expect(business).not.toBe(null);
-    expect(business?.id).toBe("64c0474167a03562d0baa7db");
-    expect(business?.numberOfReviews).toBe(3);
-    expect(business?.averageRating).toBe("3.7");
+    expect(mockedReviewRepository.getByBussinesId).not.toBeCalled();
+    expect(business).toBe(null);
   });
 
   test("business without reviews", async () => {
-    mockedReviewRepository.getByBussinesId = jest
+    mockedBusinessRepository.getById = jest
       .fn()
-      .mockImplementation(() => []);
+      .mockImplementationOnce(() => mockedBusinessRepositoryResponse);
 
     const business = await businessInfrmation.getBussinesById(
       "64c0474167a03562d0baa7db"
@@ -64,17 +63,26 @@ describe("BusinessInformation", () => {
     expect(business).not.toBe(null);
     expect(business?.id).toBe("64c0474167a03562d0baa7db");
     expect(business?.numberOfReviews).toBe(0);
+    expect(business?.averageRating).toBe(undefined);
   });
 
-  test("business do not exists", async () => {
+  test("getting business by id full feature", async () => {
     mockedBusinessRepository.getById = jest
       .fn()
-      .mockImplementationOnce(() => null);
+      .mockImplementationOnce(() => mockedBusinessRepositoryResponse);
+
+    mockedReviewRepository.getByBussinesId = jest
+      .fn()
+      .mockImplementationOnce(() => mockedReviewRepositoryResponse);
 
     const business = await businessInfrmation.getBussinesById(
       "64c0474167a03562d0baa7db"
     );
     expect(mockedBusinessRepository.getById).toBeCalled();
-    expect(business).toBe(null);
+    expect(mockedReviewRepository.getByBussinesId).toBeCalled();
+    expect(business).not.toBe(null);
+    expect(business?.id).toBe("64c0474167a03562d0baa7db");
+    expect(business?.numberOfReviews).toBe(3);
+    expect(business?.averageRating).toBe("3.7");
   });
 });
