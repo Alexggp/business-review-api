@@ -1,0 +1,18 @@
+[{
+  "_id": {
+    "$oid": "64c046c867a03562d0baa7d9"
+  },
+  "type": "online",
+  "name": "Andamios Paco",
+  "website": "www.andamiospaco.com",
+  "email": "andamiosPaco@mail.com"
+},
+{
+  "_id": {
+    "$oid": "64c0474167a03562d0baa7db"
+  },
+  "name": "Churros tres hermanos",
+  "address": "www.treshermanoschurreria.com",
+  "phone": 90812321,
+  "email": "churros3hermanos@mail.com"
+}]

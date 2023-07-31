@@ -1,0 +1,79 @@
+{
+	"info": {
+		"_postman_id": "376e99f4-99bf-48f1-b8cf-8f039113bce5",
+		"name": "Business Review API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "2695850"
+	},
+	"item": [
+		{
+			"name": "Get Business By Id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/businesses/64c0474167a03562d0baa7db",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"businesses",
+						"64c0474167a03562d0baa7db"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Reviews by Business Id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/reviews/business/64c0474167a03562d0baa7db",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"reviews",
+						"business",
+						"64c0474167a03562d0baa7db"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Post New Review ",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"business_id\": \"64c0474167a03562d0baa7db\",\r\n    \"user_name\": \"Paquiño\",\r\n    \"text\": \"Esto es un texto de prueba que cumple las restricciones de tamaño\",\r\n    \"rating\": 3\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/reviews",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"reviews"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

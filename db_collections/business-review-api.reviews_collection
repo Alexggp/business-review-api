@@ -1,0 +1,108 @@
+[{
+  "_id": {
+    "$oid": "64c11f20291be5cb8c278c29"
+  },
+  "business_id": {
+    "$oid": "64c0474167a03562d0baa7db"
+  },
+  "user_name": "64c0474167a03562d0baa7db",
+  "text": "Hola, soy Paquiño 0000000000000000000000000000",
+  "rating": 2,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64c11f8d1b388c60a9fd22cc"
+  },
+  "business_id": {
+    "$oid": "64c0474167a03562d0baa7db"
+  },
+  "user_name": "Paquiño",
+  "text": "Hola, soy Paquiño 0000000000000000000000000000",
+  "rating": 4,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64c1442169c90cef470ad39d"
+  },
+  "business_id": {
+    "$oid": "64c0474167a03562d0baa7db"
+  },
+  "user_name": "Paquiño",
+  "text": "Hola, soy Paquiño 000000000wswwww00000000000",
+  "rating": 4,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64c16361f84cd9cb4cf1a4b9"
+  },
+  "business_id": {
+    "$oid": "64c0474167a03562d0baa7db"
+  },
+  "user_name": "Paquiño",
+  "text": "Hola, soy Paquiño 000000000wswwww00000000000",
+  "rating": 4,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64c1637abe3e650025e472b8"
+  },
+  "business_id": {
+    "$oid": "64c0474167a03562d0baa7db"
+  },
+  "user_name": "Paquiño",
+  "text": "Hola, soy Paquiño 000000000wswwww00000000000",
+  "rating": 4,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64c163dbbe3e650025e472bd"
+  },
+  "business_id": {
+    "$oid": "64c0474167a03562d0baa7db"
+  },
+  "user_name": "Paquiño",
+  "text": "Hola, soy Paquiño 000000000wswwww00000000000",
+  "rating": 4,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64c17f0d6647fbb06ba90461"
+  },
+  "business_id": {
+    "$oid": "64c0474167a03562d0baa7db"
+  },
+  "user_name": "Paquiño",
+  "text": "Hola, soy Paquiño 000000000wswwww00000000000",
+  "rating": 4,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64c17f166647fbb06ba90463"
+  },
+  "business_id": {
+    "$oid": "64c0474167a03562d0baa7db"
+  },
+  "user_name": "Paquiño",
+  "text": "Hola, soy Paquiño 000000000wswwww00000000000",
+  "rating": 1,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "64c181ca62d4e8f8674e3bcb"
+  },
+  "business_id": {
+    "$oid": "64c0474167a03562d0baa7db"
+  },
+  "user_name": "Paquiño",
+  "text": "Hola, soy Paquiño 000000000wswwww00000000000",
+  "rating": 3,
+  "__v": 0
+}]
